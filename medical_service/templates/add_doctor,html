@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Doctor</title>
+</head>
+<body>
+    <h1>Add Doctor</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Doctor</button>
+    </form>
+    <a href="{% url 'add_patient' %}">Add Patient</a>
+    <a href="{% url 'add_appointment' %}">Add Appointment</a>
+    <a href="{% url 'appointment_report' %}">Appointment Report</a>
+    <a href="{% url 'today_appointments' %}">Today Appointments</a>
+</body>
+</html>
